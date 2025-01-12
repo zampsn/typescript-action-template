@@ -1,0 +1,6 @@
+name: Create GitHub Issue
+description: Creates a GitHub issue from a template
+
+runs:
+  using: node20
+  main: dist/index.js

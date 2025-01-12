@@ -1,0 +1,1 @@
+[![codecov](https://codecov.io/github/devtoastz/typescript-action-template/graph/badge.svg?token=71X646V67T)](https://codecov.io/github/devtoastz/typescript-action-template)
