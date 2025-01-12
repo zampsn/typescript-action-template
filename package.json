@@ -18,5 +18,15 @@
   "dependencies": {
     "@actions/github": "^6.0.0",
     "@types/node": "^22.10.5"
+  },
+  "vitest": {
+    "coverage": {
+      "provider": "v8",
+      "reporter": [
+        "text",
+        "lcov"
+      ],
+      "reportsDirectory": "./coverage"
+    }
   }
 }

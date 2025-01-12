@@ -1,9 +1,10 @@
 name: Build and Test
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 permissions:
   contents: write
@@ -42,3 +43,12 @@ jobs:
           push: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Coverage to Codecov
+        #  if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
