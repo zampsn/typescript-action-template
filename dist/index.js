@@ -29813,7 +29813,7 @@ __nccwpck_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* v8 ignore start */
 
 await (0,_main__WEBPACK_IMPORTED_MODULE_0__/* .run */ .e)();
-/* v8 ignore end */ 
+/* v8 ignore end */
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } }, 1);
@@ -29865,7 +29865,10 @@ const run = async () => {
         lib_core.info(`repository: ${repository}`);
     }
     catch (error) {
-        lib_core.setFailed(error.message);
+        if (error instanceof Error)
+            lib_core.setFailed(error.message);
+        else
+            lib_core.setFailed('Unexpected error occurred');
     }
 };
 

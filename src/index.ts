@@ -1,5 +1,5 @@
 /* v8 ignore start */
-import {run} from './main'
+import { run } from './main';
 
-await run()
+await run();
 /* v8 ignore end */
